@@ -544,4 +544,59 @@ listofProjectEmpAssignment::~listofProjectEmpAssignment()
 	out.flush();
 	out.close();
 }
-
+int main(){
+    int choice;
+    EmployeeList el;
+    ProjectList pl;
+    ProjectEmployeeAssignment epa;
+    listofProjectEmpAssignment lpa;
+    while (true){
+        printMenu();
+        cin >> choice;
+        if (choice ==1){
+            string name, id;
+            cout << "Please enter your ID and Name:\n";
+            cin >> name>> id;
+            Employee e(name, id);
+            el.addEmployee(e);
+        }
+        else if(choice ==2){
+            string name, id;
+            cout << "Please enter the ID and Name of the project:\n";
+            cin >> name>> id;
+            Project p(name, id);
+            pl.addProject(p);
+        }
+        else if(choice ==3){
+            lpa.listAllProjectsAssignments();
+        }
+        else if(choice==4){
+            pl.listProjects();
+        }
+        else if(choice==5){
+            lpa.listAllCompleteProjects();
+        }
+        else if(choice==6){
+            lpa.listAllIncompleteProjects();
+        }
+        else if(choice==7){
+            string choice;
+            cout << "Enter ID or the Name of the Employee or the project you are searching for:\n";
+            cin >> choice;
+            el.findEmployeeIndexInVector(choice);
+            el.getEmployee(choice);
+            pl.findProjectIndexInVector(choice);
+            pl.getProjectTitle(choice);
+        }
+        else if(choice==8){
+            
+        }
+        else if(choice==9){
+            
+        }
+        
+        
+    }
+    
+    return 0;
+}
