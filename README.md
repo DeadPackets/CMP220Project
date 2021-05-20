@@ -1,2 +1,2 @@
 # CMP220Project
-Whatever, I want grades..... thanks
+An HR system built entire in C++. A project for AUS' Programming II course.
